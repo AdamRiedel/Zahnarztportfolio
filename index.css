@@ -8,6 +8,7 @@
   --black: #041518;
   --white: #d4e8ec;
   --error: #c11721;
+  --main: #22777f;
   --second-1: #0f6171;
   --second-2: #379495;
   --second-3: #fbfcec;
@@ -16,7 +17,35 @@
 }
 
 body{
+  font-family: OpenSans, sans-serif;
   color: var(--black);
+
+  header{
+    nav{
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--main);
+      color: var(--white);
+      padding: 1em 2em;
+
+      h6{
+        font-weight: 200;
+      }
+
+      img.svg{
+        height: 2rem;
+
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+
+      .navbar-right{
+        display: flex;
+        gap: 0.5em;
+      }
+    }
+  }
 }
 
 /* Fonts */
