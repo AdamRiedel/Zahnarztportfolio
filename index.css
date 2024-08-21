@@ -20,13 +20,36 @@ body{
   font-family: OpenSans, sans-serif;
   color: var(--black);
 
+  a.btn-cta{
+    display: inline-block;
+    text-align: center;
+    background-color: var(--realwhite);
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    text-decoration: none;
+    color: var(--black);
+    transition: all 0.2s;
+    box-shadow: 1px 1px 2px 0 rgba(49, 85, 94, 0.64), 2px 3px 4px 0 rgba(49, 85, 94, 0.55), 5px 8px 6px 0 rgba(49, 85, 94, 0.33), 10px 14px 7px 0 rgba(49, 85, 94, 0.1), 15px 21px 7px 0 rgba(49, 85, 94, 0.01);
+
+    &:hover{
+      background-color: var(--accent);
+    }
+
+    &:active{
+      background-color: var(--black);
+      color: var(--white);
+      box-shadow: none;
+    }
+  }
+
   header{
     nav{
       display: flex;
       justify-content: space-between;
+      align-items: center;
       background-color: var(--main);
       color: var(--white);
-      padding: 1em 2em;
+      padding: 1rem 2rem;
 
       h6{
         font-weight: 200;
@@ -65,12 +88,19 @@ body{
       padding: 2rem 4rem;
       border-radius: 1.25rem;
       background-color: var(--main);
+      margin: 1em;
+
+      box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, 0.2), 11px 14px 18px 0 rgba(0, 0, 0, 0.17), 24px 33px 24px 0 rgba(0, 0, 0, 0.1), 43px 58px 29px 0 rgba(0, 0, 0, 0.03), 68px 90px 32px 0 rgba(0, 0, 0, 0);
 
       .text-container{
         text-align: center;
         h3{
           font-weight: 200;
         }
+      }
+
+      .btn-container{
+        text-align: center;
       }
     }
   }
@@ -102,35 +132,35 @@ body{
 /* Typescale */
 
 h1{
-  font-size: 5.61rem;
+  font-size: calc(5.61rem * 0.8);
 }
 
 h2{
-  font-size: 4.209rem;
+  font-size: calc(4.209rem * 0.8);
 }
 
 h3{
-  font-size: 3.157rem;
+  font-size: calc(3.157rem * 0.8);
 }
 
 h4{
-  font-size: 2.369rem;
+  font-size: calc(2.369rem * 0.8);
 }
 
 h5{
-  font-size: 1.777rem;
+  font-size: calc(1.777rem * 0.8);
 }
 
 h6{
-  font-size: 1.333rem;
+  font-size: calc(1.333rem * 0.8);
 }
 
 p{
-  font-size: 1rem;
+  font-size: calc(1rem * 0.8);
 }
 
 small{
-  font-size: 0.75rem;
+  font-size: calc(0.75rem * 0.8);
 }
 
 .container{
@@ -148,6 +178,40 @@ small{
 }
 
 @media (min-width: 768px){
+  body{
+    h1{
+      font-size: 5.61rem;
+    }
+    
+    h2{
+      font-size: 4.209rem;
+    }
+    
+    h3{
+      font-size: 3.157rem;
+    }
+    
+    h4{
+      font-size: 2.369rem;
+    }
+    
+    h5{
+      font-size: 1.777rem;
+    }
+    
+    h6{
+      font-size: 1.333rem;
+    }
+    
+    p{
+      font-size: 1rem
+    }
+    
+    small{
+      font-size: 0.75rem;
+    }
+  }
+
   .container{
     width: 85%;
   }
