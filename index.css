@@ -101,6 +101,51 @@ body{
       }
     }
   }
+
+  .about-me{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+
+    .cards-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .card-left,
+      .card-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(28.375rem * 0.75);
+        height: 30.9375rem;
+        padding: 5rem 4rem;
+      }
+
+      .card-left{
+        img{
+          height: 16.3125rem;
+          width: 16.3125rem;
+        }
+      }
+
+      .card-right{
+        text-align: justify;
+        gap: 2rem;
+        h6{
+          font-weight: 400;
+        }
+        background-color: var(--main);
+        color: var(--white);
+        border-radius: 1.25rem;
+      }
+    }
+  }
 }
 
 /* Fonts */
@@ -166,6 +211,7 @@ small{
   padding-left: 1rem;
   margin-left: auto;
   margin-right: auto;
+}
 
 @media (min-width: 576px){
   .container{
@@ -214,10 +260,22 @@ small{
 
   html{
     font-size: 1.1rem;
-  }
+  } 
+
 }
 
+
 @media (min-width: 992px){
+
+  body{
+    .about-me{
+      .cards-container{
+        flex-direction: row;
+        margin-top: 8rem;
+      }
+    }
+  }
+
   html{
     font-size: 1.125rem;
   }
