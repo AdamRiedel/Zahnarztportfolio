@@ -1,0 +1,29 @@
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main);
+    color: var(--white);
+    padding: 1rem 2rem;
+    h6 {
+      font-weight: 200;
+    }
+  }
+}
+
+nav,
+footer {
+  img.svg {
+    height: 2rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .right-side {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
