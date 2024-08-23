@@ -200,10 +200,87 @@ body{
           transform: rotate(360deg);
         }
       }
+    }
+  }
 
+  .skills {
+    text-align: center;
+    padding: 8rem 0;
+    .skills-container {
+      height: 1378px;
+      margin-top: 2rem;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(1, 312px);
+      grid-template-rows: repeat(6, 312px);
+      row-gap: 4rem;
+      grid-template-areas:
+        "two" "one"
+        "three" "four"
+        "six" "five";
+
+      .skill-img,
+      .skill-desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        gap: 1rem;
+        padding: 2rem;
+      }
+
+      .one {
+        grid-area: one;
+        width: 9.375rem;
+        height: 9.375rem;
+        justify-self: center;
+        position: relative;
+        top: -4.2rem;
+      }
+
+      .two {
+        grid-area: two;
+      }
+
+      .three {
+        grid-area: three;
+        position: relative;
+        top: -18.5rem;
+      }
+
+      .four {
+        grid-area: four;
+        width: 9.375rem;
+        height: 9.375rem;
+        justify-self: center;
+        position: relative;
+        top: -22.6rem;
+      }
+      .five {
+        grid-area: five;
+        width: 9.375rem;
+        height: 9.375rem;
+        justify-self: center;
+        position: relative;
+        top: -41rem;
+      }
+      .six {
+        grid-area: six;
+        position: relative;
+        top: -36.9rem;
+      }
+
+      .skill-img {
+        background-color: var(--main);
+        img {
+          height: 8rem;
+        }
+      }
     }
   }
 }
+
 
 /* Fonts */
 
@@ -230,39 +307,41 @@ body{
 
 /* Typescale */
 
-h1{
+h1,
+h2,
+h3,
+h4{
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+h1 {
   font-size: calc(5.61rem * 0.8);
 }
-
-h2{
+h2 {
   font-size: calc(4.209rem * 0.8);
 }
-
-h3{
+h3 {
   font-size: calc(3.157rem * 0.8);
 }
-
-h4{
+h4 {
   font-size: calc(2.369rem * 0.8);
 }
-
-h5{
+h5 {
   font-size: calc(1.777rem * 0.8);
 }
-
-h6{
+h6 {
   font-size: calc(1.333rem * 0.8);
 }
-
-p{
+p {
   font-size: calc(1rem * 0.8);
 }
-
-small{
+small {
   font-size: calc(0.75rem * 0.8);
 }
 
-.container{
+
+.container {
   width: 95%;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -270,14 +349,14 @@ small{
   margin-right: auto;
 }
 
-@media (min-width: 576px){
-  .container{
+@media (min-width: 576px) {
+  .container {
     width: 90%;
   }
 
-  body{
-    .newsletter{
-      .newsletter-form{
+  body {
+    .newsletter {
+      .newsletter-form {
         flex-direction: row;
         gap: 1rem;
       }
@@ -285,100 +364,152 @@ small{
   }
 }
 
-@media (min-width: 768px){
-  body{
-    h1{
+@media (min-width: 768px) {
+  html {
+    font-size: 1.1rem;
+  }
+  body {
+    h1 {
       font-size: 5.61rem;
     }
-    
-    h2{
+    h2 {
       font-size: 4.209rem;
     }
-    
-    h3{
+    h3 {
       font-size: 3.157rem;
     }
-    
-    h4{
+    h4 {
       font-size: 2.369rem;
     }
-    
-    h5{
+    h5 {
       font-size: 1.777rem;
     }
-    
-    h6{
+    h6 {
       font-size: 1.333rem;
     }
-    
-    p{
-      font-size: 1rem
+    p {
+      font-size: 1rem;
     }
-    
-    small{
+    small {
       font-size: 0.75rem;
     }
-  }
 
-  .container{
-    width: 85%;
-  }
-
-  html{
-    font-size: 1.1rem;
-  } 
-
-}
-
-
-@media (min-width: 992px){
-
-  body{
-    .about-me{
-      .cards-container{
-        flex-direction: row;
-        margin-top: 8rem;
+    .about-me {
+      .cards-container {
+        .card-left,
+        .card-right {
+          padding: 16rem 4rem;
+        }
       }
     }
 
-    .newsletter{
-      .newsletter-form{
+    .skills {
+      .skills-container {
+        height: auto;
+        margin-top: 8rem;
+        row-gap: 8rem;
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(3, 350px);
+        grid-template-areas:
+          "one two"
+          "three four"
+          "five six";
+
+        /* Text */
+        .skill-desc.two {
+          position: static;
+          border-right: 0.0625rem solid black;
+          width: 350px;
+          height: 350px;
+        }
+        .skill-desc.three {
+          position: static;
+          border-left: 0.0625rem solid black;
+          width: 350px;
+          height: 350px;
+        }
+
+        .skill-desc.six {
+          position: static;
+          grid-area: six;
+          border-right: 0.0625rem solid black;
+          width: 350px;
+          height: 350px;
+        }
+
+        /* Images */
+
+        .skill-img.one {
+          position: static;
+          width: 350px;
+          height: 350px;
+        }
+        .skill-img.four {
+          position: static;
+          width: 350px;
+          height: 350px;
+        }
+        .skill-img.five {
+          position: static;
+          width: 350px;
+          height: 350px;
+        }
+      }
+    }
+  }
+
+  .container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 1.125rem;
+  }
+  body {
+    .about-me {
+      .cards-container {
+        margin-top: 8rem;
+        flex-direction: row;
+
+        .card-left,
+        .card-right {
+          width: 28.375rem;
+        }
+      }
+    }
+    .newsletter {
+      .newsletter-form {
         width: 33.25rem;
       }
     }
   }
-
-  html{
-    font-size: 1.125rem;
-  }
 }
 
-@media (min-width: 1200px){
-  .container{
-    width: 80%;
-  }
-
-  html{
+@media (min-width: 1200px) {
+  html {
     font-size: 1.15rem;
   }
+  .container {
+    width: 80%;
+  }
 }
 
-@media (min-width: 1400px){
-  .container{
-    width: 70%;
-  }
-
-  html{
+@media (min-width: 1400px) {
+  html {
     font-size: 1.2rem;
   }
+  .container {
+    width: 70%;
+  }
 }
 
-@media (min-width: 1920px){
-  .container{
-    width: 60%;
-  }
-
-  html{
+@media (min-width: 1920px) {
+  html {
     font-size: 1.25rem;
+  }
+  .container {
+    width: 60%;
   }
 }
