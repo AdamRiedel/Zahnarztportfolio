@@ -234,6 +234,13 @@ body{
         "three" "four"
         "six" "five";
 
+      .skill-img {
+        transition: all 0.4s;
+        &:hover {
+          background-color: var(--second-2);
+        }
+      }
+
       .skill-img,
       .skill-desc {
         display: flex;
