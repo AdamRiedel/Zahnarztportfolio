@@ -146,6 +146,63 @@ body{
       }
     }
   }
+
+  .newsletter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    background-color: var(--main);
+    padding: 8rem;
+    color: var(--realwhite);
+
+    .text-container{
+      h3{
+        font-weight: 400;
+      }
+      h6{
+        font-weight: 400;
+      }
+      margin-bottom: 4rem;
+    }
+
+    .newsletter-form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      width: 20rem;
+      input{
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 1rem;
+        width: 100%;
+      }
+      button{
+        background-color: var(--main);
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        img{
+          height: 3rem;
+        }
+
+        &:hover{
+          transform: rotate(35deg);
+        }
+
+        &:active{
+          transform: rotate(360deg);
+        }
+      }
+
+    }
+  }
 }
 
 /* Fonts */
@@ -217,6 +274,15 @@ small{
   .container{
     width: 90%;
   }
+
+  body{
+    .newsletter{
+      .newsletter-form{
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px){
@@ -272,6 +338,12 @@ small{
       .cards-container{
         flex-direction: row;
         margin-top: 8rem;
+      }
+    }
+
+    .newsletter{
+      .newsletter-form{
+        width: 33.25rem;
       }
     }
   }
